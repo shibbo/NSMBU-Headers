@@ -12,7 +12,7 @@ struct ActorInfo
         FlagUnknown2         = 0x100
     };
 
-    static ActorInfo Default;
+    static ActorInfo sDefault;
 
     Vec2i mSpawnOffset;         // _0
     Vec2i mSpawnRangeOffset;    // _8

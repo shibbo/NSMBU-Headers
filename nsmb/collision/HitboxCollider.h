@@ -19,7 +19,7 @@ public:
 
     struct Info
     {
-        static Info DefaultInfo;
+        static Info sDefault;
 
         Vec2 mDistToCenter;     // _0
         Vec2 mDistToEdge;       // _8
@@ -42,11 +42,11 @@ public:
             Node* mPrev;            // _8
         };
 
-        virtual void insert(Node *, Node *);
-        virtual void remove(Node *);
-        virtual void insertBack(Node *);
-        virtual void insertFront(Node *);
-        virtual void clear();
+        virtual void insert(Node *, Node *); // 0C deleted
+        virtual void remove(Node *);         // 14 deleted
+        virtual void insertBack(Node *);     // 1C deleted
+        virtual void insertFront(Node *);    // 24 deleted
+        virtual void clear();                // 2C deleted
 
         Node* mFirst;   // _0
         Node* mLast;    // _4

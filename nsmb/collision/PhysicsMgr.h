@@ -3,7 +3,7 @@
 #include "nsmb/collision/TileChecker.h"
 #include "sead.h"
 
-class BaseActor;
+class StageActor;
 
 class PhysicsMgr : public TileChecker
 {
@@ -11,8 +11,8 @@ class PhysicsMgr : public TileChecker
 public:
     struct Sensor
     {
-        f32 _0;
-        f32 _4;
+        f32 mPoint1;             // _0
+        f32 mPoint2;             // _4
         f32 mDistanceFromCenter; // _8
     };
 
@@ -31,7 +31,7 @@ public:
     virtual void vf6C();
 
     u8 _4C[0x890 - 0x4C];
-    BaseActor* mActor;          // _890
+    StageActor* mOwner;         // _890
     u32 _894;
     Vec3* mPosition;            // _898
     Vec3* mLastPosition;        // _89C

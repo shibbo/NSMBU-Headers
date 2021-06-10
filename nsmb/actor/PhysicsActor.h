@@ -8,7 +8,7 @@ class PhysicsActor : public StageActor
 {
     SEAD_RTTI_OVERRIDE(PhysicsActor, StageActor)
 public:
-    PhysicsActor(const ActorBuildInfo *pInfo);
+    PhysicsActor(const ActorBuildInfo *pBuildInfo);
 
     virtual ~PhysicsActor();
 

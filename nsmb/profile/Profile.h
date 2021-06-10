@@ -4,8 +4,8 @@
 #include "sead.h"
 
 class BaseActor;
-class ActorBuildInfo;
-class ActorInfo;
+struct ActorBuildInfo;
+struct ActorInfo;
 
 class Profile
 {
@@ -23,6 +23,7 @@ public:
     u32 mFlags;                                          // _10
 
     static u32 spriteToProfileList[];
+
     static const u32 NUM_PROFILES_ORIGINAL = 913;
     static const s16 prioritiesOriginal[NUM_PROFILES_ORIGINAL];
     static Profile* profilesOriginal[NUM_PROFILES_ORIGINAL];
