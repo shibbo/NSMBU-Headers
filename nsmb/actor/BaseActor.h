@@ -47,7 +47,7 @@ public:
 
     virtual PreResult beforeDraw();
     virtual DoResult onDraw();
-    virtual void afterDraw(u32);
+    virtual void afterDraw(PostArg);
 
     virtual PreResult beforeDelete();
     virtual DoResult onDelete();
