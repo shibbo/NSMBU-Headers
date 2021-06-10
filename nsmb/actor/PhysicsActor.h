@@ -25,7 +25,7 @@ public:
     virtual void vfC4();
     virtual void vfCC();
 
-    virtual void updateChallengeBumpTimer();
+    virtual void damageFromUnder();
 
     virtual void vf10C(u8 unk);
     virtual u8 vf114();

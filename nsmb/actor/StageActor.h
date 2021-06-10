@@ -40,7 +40,7 @@ public:
     virtual void splashLavaWaves();
     virtual void splashPoison();
     virtual bool isOffScreen() const;
-    virtual void updateChallengeBumpTimer();
+    virtual void damageFromUnder();
     
     u32 mDirection;                     // _50
     s8 mPlayerID;                       // _54
