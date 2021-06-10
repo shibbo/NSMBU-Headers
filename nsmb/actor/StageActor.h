@@ -1,10 +1,11 @@
 #pragma once
 
+#include "nsmb/actor/ActorBuildInfo.h"
 #include "nsmb/actor/BaseActor.h"
 #include "nsmb/collision/HitboxCollider.h"
 #include "sead.h"
 
-class ActorCollisionMgr;
+class ActorPhysicsMgr;
 class BabyYoshiEatData;
 class YoshiEatData;
 
@@ -27,7 +28,7 @@ public:
     virtual void removeColliders();
     virtual void addColliders();
 
-    virtual ActorCollisionMgr* getCollisionMgr() const;
+    virtual ActorPhysicsMgr* getActorPhysicsMgr() const;
     virtual void vfAC();
     virtual u32 vfB4();
     virtual void vfBC();

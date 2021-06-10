@@ -45,3 +45,11 @@ struct Vec3
     f32 y;
     f32 z;
 };
+
+struct Rect
+{
+    f32 x;
+    f32 y;
+    f32 w;
+    f32 h;
+};

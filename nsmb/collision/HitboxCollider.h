@@ -42,11 +42,11 @@ public:
             Node* mPrev;            // _8
         };
 
-        virtual void insert(Node *, Node *) = delete;
-        virtual void remove(Node *) = delete;
-        virtual void insertBack(Node *) = delete;
-        virtual void insertFront(Node *) = delete;
-        virtual void clear() = delete;
+        virtual void insert(Node *, Node *);
+        virtual void remove(Node *);
+        virtual void insertBack(Node *);
+        virtual void insertFront(Node *);
+        virtual void clear();
 
         Node* mFirst;   // _0
         Node* mLast;    // _4
