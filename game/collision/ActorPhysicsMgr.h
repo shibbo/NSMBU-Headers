@@ -1,6 +1,6 @@
 #pragma once
 
-#include "nsmb/collision/PhysicsMgr.h"
+#include "game/collision/PhysicsMgr.h"
 
 class ActorPhysicsMgr : public PhysicsMgr
 {

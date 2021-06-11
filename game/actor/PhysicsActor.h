@@ -1,7 +1,7 @@
 #pragma once
 
-#include "nsmb/actor/StageActor.h"
-#include "nsmb/collision/ActorPhysicsMgr.h"
+#include "game/actor/StageActor.h"
+#include "game/collision/ActorPhysicsMgr.h"
 #include "sead.h"
 
 class PhysicsActor : public StageActor

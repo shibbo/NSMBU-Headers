@@ -3,9 +3,9 @@
 #include "types.h"
 #include "sead.h"
 
-#include <nsmb/actor/ActorBuildInfo.h>
-#include <nsmb/actor/ActorInfo.h>
-#include <nsmb/profile/Profile.h>
+#include <game/actor/ActorBuildInfo.h>
+#include <game/actor/ActorInfo.h>
+#include <game/profile/Profile.h>
 
 enum PreResult
 {
@@ -24,7 +24,7 @@ enum PostArg
 {
     PrePaused = 0,
     Failed = 1,
-    Succeded = 2,
+    Succeeded = 2,
     Paused = 3
 };
 

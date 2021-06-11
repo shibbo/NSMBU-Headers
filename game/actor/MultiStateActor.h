@@ -1,6 +1,7 @@
 #pragma once
 
-#include "nsmb/actor/PhysicsActor.h"
+#include "game/actor/PhysicsActor.h"
+#include "game/State.h"
 #include "sead.h"
 
 class MultiStateActor : public PhysicsActor

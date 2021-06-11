@@ -1,6 +1,6 @@
 #pragma once
 
-#include "nsmb/collision/TileChecker.h"
+#include "game/collision/TileChecker.h"
 #include "sead.h"
 
 class StageActor;
