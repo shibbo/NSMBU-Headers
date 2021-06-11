@@ -53,23 +53,23 @@ public:
     virtual DoResult onDelete();
     virtual void afterDelete(PostArg);
 
-    sead::Heap* mHeap; // _0
-    u32 mID; // _4
-    Profile* mProfile; // _8
-    bool mIsNotDeffered; // _C
-    bool mIsSprite; // _D
-    bool mIsCreated; // _E
-    bool mIsDeleted; // _F
-    u32 mSettings_1; // _10
-    u32 mSettings_2; // _14
-    u8 mMovementID; // _18
-    u8 mLinkID; // _19
-    u8 mInitialStateFlags; // _1A
-    u8 _1B;
+    sead::Heap* mHeap;                      // _0
+    u32 mID;                                // _4
+    Profile* mProfile;                      // _8
+    bool mIsNotDeffered;                    // _C
+    bool mIsSprite;                         // _D
+    bool mIsCreated;                        // _E
+    bool mIsDeleted;                        // _F
+    u32 mSettings_1;                        // _10
+    u32 mSettings_2;                        // _14
+    u8 mMovementID;                         // _18
+    u8 mLinkID;                             // _19
+    u8 mInitialStateFlags;                  // _1A
+    u8 _1B;                                 // _1B Padding
     sead::OffsetList<BaseActor> mChildList; // _1C
-    sead::ListNode mChildNode; // _2C
-    BaseActor* mParent; // _34
-    sead::ListNode mActorListNode; // _38
-    sead::ListNode mDrawListNode; // _40
-    u32 mFlags; // _48
+    sead::ListNode mChildNode;              // _2C
+    BaseActor* mParent;                     // _34
+    sead::ListNode mActorListNode;          // _38
+    sead::ListNode mDrawListNode;           // _40
+    u32 mFlags;                             // _48
 };

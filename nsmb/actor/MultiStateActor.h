@@ -7,6 +7,7 @@ class MultiStateActor : public PhysicsActor
 {
     SEAD_RTTI_OVERRIDE(MultiStateActor, PhysicsActor)
 public:
+    MultiStateActor(const ActorBuildInfo *pBuildInfo);
 
     virtual ~MultiStateActor();
 
@@ -29,5 +30,7 @@ public:
     virtual u32 vf16C();
     virtual u32 vf174();
     virtual void getRect(Rect *);
-    virtual void doStateChange();
+    virtual void doStateChange(StateBase *);
+
+    StateWrapperMulti<MultiStateActor> mStates;  // _17A0
 };

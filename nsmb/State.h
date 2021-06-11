@@ -31,7 +31,7 @@
         (&CLASS::beginState_##NAME,                     \
          &CLASS::executeState_##NAME,                   \
          &CLASS::endState_##NAME,                       \
-         &StateBase::NullState);
+         &StateBase::sNullState);
 
 #define CREATE_STATE_OVERRIDE(CLASS, BASECLASS, NAME)   \
     StateVirtual<CLASS> CLASS::StateID_##NAME           \
@@ -47,7 +47,7 @@ class StateBase
 public:
     inline StateBase() 
     {
-        this->mID = currentId++;
+        this->mID = sCurrentId++;
     }
 
     virtual ~StateBase()
@@ -62,12 +62,12 @@ public:
         return this->getRootId() == other->getRootId();
     }
 
-    static StateBase NullState;
+    static StateBase sNullState;
 
     s32 mID;
 
 private:
-    static s32 currentId;
+    static s32 sCurrentId;
 };
 
 template <class TOwner>
@@ -86,7 +86,8 @@ protected:
 };
 
 template <class TOwner>
-class StateVirtual : public State<TOwner> {
+class StateVirtual : public State<TOwner>
+{
 public:
     typedef void (TOwner::*funcPtr)();
 
@@ -100,10 +101,10 @@ public:
 
     s32 getRootId() override 
     {
-        if (mBaseState->id != -1)
+        if (mBaseState->mID != -1)
             return mBaseState->getRootId();
 
-        return id;
+        return mID;
     }
 
 private:
@@ -155,7 +156,7 @@ public:
 class StateMgr 
 {
 public:
-    StateMgr(StateExecuterBase* executer, StateBase* firstState = &StateBase::NullState);
+    StateMgr(StateExecuterBase* executer, StateBase* firstState = &StateBase::sNullState);
 
     StateBase* getCurrentState();
     void execute();

@@ -13,7 +13,7 @@ class StageActor : public BaseActor
 {
     SEAD_RTTI_OVERRIDE(StageActor, BaseActor)
 public:
-    StageActor(const ActorBuildInfo *pInfo);
+    StageActor(const ActorBuildInfo *pBuildInfo);
 
     virtual ~StageActor();
 
