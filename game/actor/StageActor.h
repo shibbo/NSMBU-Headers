@@ -1,8 +1,8 @@
 #pragma once
 
-#include "nsmb/actor/ActorBuildInfo.h"
-#include "nsmb/actor/BaseActor.h"
-#include "nsmb/collision/HitboxCollider.h"
+#include "game/actor/ActorBuildInfo.h"
+#include "game/actor/BaseActor.h"
+#include "game/collision/HitboxCollider.h"
 #include "sead.h"
 
 class ActorPhysicsMgr;
