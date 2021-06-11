@@ -7,7 +7,7 @@
 #include <game/actor/ActorInfo.h>
 #include <game/profile/Profile.h>
 
-enum PreResult
+/*enum PreResult
 {
     TryNextFrame = 0,
     OK = 1
@@ -26,7 +26,12 @@ enum PostArg
     Failed = 1,
     Succeeded = 2,
     Paused = 3
-};
+};*/
+
+// todo -- properly do these enums
+typedef int PreResult;
+typedef int DoResult;
+typedef int PostArg;
 
 class BaseActor
 {

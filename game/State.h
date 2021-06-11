@@ -205,6 +205,7 @@ template <class TOwner>
 class StateWrapperMulti 
 {
 public:
+
     virtual ~StateWrapperMulti()
     {
 
