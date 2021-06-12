@@ -2,6 +2,7 @@
 
 #include "types.h"
 #include "sead.h"
+#include "ghs/prep.h"
 
 class BaseActor;
 struct ActorBuildInfo;
