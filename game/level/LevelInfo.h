@@ -19,6 +19,16 @@ public:
     void goToDestLevel();
     void goToMainEntrance();
 
+    // custom function
+    void goTo(u8 worldNo, u8 levelNo, u8 areaNo, u8 entranceNo, u32 entranceType)
+    {
+        this->setDestWorld(worldNo);
+        this->setDestLevel(levelNo);
+        this->setDestArea(areaNo);
+        this->setDestEntrance(entranceNo);
+        this->setDestEntranceType(entranceType);
+    }
+
     static void createInstance(sead::Heap *);
     static LevelInfo* sInstance;
 

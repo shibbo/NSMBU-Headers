@@ -7,7 +7,7 @@ class StageActor;
 class HitboxCollider : public sead::IDisposer
 {
 public:
-    typedef void (*Callback)(HitboxCollider* hcSelf, HitboxCollider* hcOther);
+    typedef void (*Callback)(HitboxCollider* pHCSelf, HitboxCollider* pHCOther);
 
     enum HitboxShape
     {

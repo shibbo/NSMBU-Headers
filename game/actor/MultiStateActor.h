@@ -21,6 +21,7 @@ public:
     virtual void vfCC();
 
     virtual void damageFromUnder();
+    virtual void vf10C(u8 unk);
     virtual void vf11C();
     virtual void vf124(f32);
     virtual u32 vf12C();
