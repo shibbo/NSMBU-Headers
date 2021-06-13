@@ -7,8 +7,8 @@ namespace sead
     class ListNode
     {
     public:
-        ListNode* mPrev = nullptr;
-        ListNode* mNext = nullptr;
+        ListNode* mPrev;
+        ListNode* mNext;
     };
 
     class ListImpl

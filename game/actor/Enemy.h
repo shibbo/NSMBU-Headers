@@ -30,7 +30,7 @@ public:
 
     virtual ~Enemy();
 
-    virtual u32 beforeExecute();
+    virtual PreResult beforeExecute();
 
     virtual void setPlayerId(s8);
     virtual ActorPhysicsMgr* getActorPhysicsMgr() const;
