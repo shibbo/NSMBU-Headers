@@ -1,6 +1,7 @@
 #pragma once
 
 #define override
+#define nullptr NULL
 
 typedef unsigned char       u8;
 typedef unsigned short      u16;

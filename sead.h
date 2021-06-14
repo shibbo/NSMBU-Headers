@@ -1,5 +1,6 @@
 #pragma once
 
+#include <sead/seadBuffer.h>
 #include <sead/seadDisposer.h>
 #include <sead/seadHeap.h>
 #include <sead/seadHostIO.h>

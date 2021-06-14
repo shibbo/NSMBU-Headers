@@ -21,4 +21,6 @@ namespace sead
 
         const T* mStringTop; // _4
     };
+
+    typedef SafeStringBase<char> SafeString;
 };
