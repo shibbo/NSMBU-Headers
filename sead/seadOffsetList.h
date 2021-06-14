@@ -8,8 +8,6 @@ namespace sead
     class OffsetList : public ListImpl
     {
     public:
-        T* mPtr;
-        ListNode* mNext;
         s32 mOffs;
     };
 };

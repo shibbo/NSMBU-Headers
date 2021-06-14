@@ -29,6 +29,17 @@ public:
         this->setDestEntranceType(entranceType);
     }
 
+    bool isCourseLevel() const;
+    bool isNormalLevel() const;
+    bool isSecretLevel() const;
+    bool isGhostHouse() const;
+    bool isToadHouseLevel() const;
+    bool isRecordToadHouseLevel() const;
+
+    bool isWorldOne() const;
+    void setTitleScene();
+    void setDemoScene();
+
     static void createInstance(sead::Heap *);
     static LevelInfo* sInstance;
 

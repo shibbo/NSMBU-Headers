@@ -41,6 +41,11 @@ public:
     virtual void splashPoison();
     virtual bool isOffScreen() const;
     virtual void damageFromUnder();
+
+    void assignZoneID();
+    void calcXSpeed();
+    void clampAndAddSpeedY(f32, f32);
+    void moveYSpeedToValue(f32, f32);
     
     u32 mDirection;                     // _50
     s8 mPlayerID;                       // _54
@@ -63,7 +68,7 @@ public:
     Vec2 mPositionDelta;                // _B4
     HitboxCollider mHitboxCollider;     // _BC
     Vec2 mVisibleAreaOffs;              // _1E4
-    Vec2 mVisibleAreaSize;              // _11EC
+    Vec2 mVisibleAreaSize;              // _1EC
     Vec2 mSize;                         // _1F4
     f32 _1FC;
     f32 _200;
@@ -78,15 +83,16 @@ public:
     u8 _212;
     u8 mEventID;                        // _213
     u8 mEventID_2;                      // _214
-    u16 mActorInfoFlags;                // _215
-    u8 _217;
+    u8 _215;
+    u16 mActorInfoFlags;                // _216
     u32 mBumpDamageTimer;               // _218
     u32 _21C;
     u32 _220;
     u32 _224;
     u32 _228;
     u32 mKillStreak;                    // _22C
-    u32 mProfileFlags;                  // _234
+    u32 mProfileFlags;                  // _230
+    Vec3 mPositionOffset;               // _234
     Vec3 _240;
     Vec3 _24C;
     Vec3 _258;
