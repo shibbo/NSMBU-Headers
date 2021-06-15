@@ -61,7 +61,7 @@ public:
     Vec3 mSpeed;                        // _78
     Vec3 mMaxSpeed;                     // _84
     Vec3 mScale;                        // _90
-    Vec3u mRotation;                    // _9C
+    Vec3i mRotation;                    // _9C
     u32 _A8;
     u32 _AC;
     u32 mRotationDelta;                 // _B0
