@@ -7,6 +7,7 @@
 class BaseActor;
 struct ActorBuildInfo;
 struct ActorInfo;
+class ResArchive;
 
 class Profile
 {
@@ -14,6 +15,12 @@ public:
     Profile(BaseActor * (*pBuildFunction)(const ActorBuildInfo *pBuildInfo), u32 id, const sead::SafeStringBase<char> &rActorName, const ActorInfo* pActorInfo, u32 flags);
 
     static Profile* get(u32 id);
+    static s16 getPriority(u32 id);
+    static bool hasResources(u32 id);
+    static u8 getProfileResourceCount(u32 id);
+    static sead::SafeStringBase<char>* getProfileResourceNames(u32 id);
+    
+    ResArchive* getResourceArchive(u32);
 
     BaseActor* (*mBuildFunction)(const ActorBuildInfo*); // _0
     u32 mID;                                             // _4

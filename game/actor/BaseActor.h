@@ -15,7 +15,7 @@ enum PreResult
 
 enum DoResult
 {
-    TryNextFrame = 0,
+    TryNext = 0,
     Done = 1,
     Delete = 2
 };
@@ -68,10 +68,10 @@ public:
     bool mIsSprite;                         // _D
     bool mIsCreated;                        // _E
     bool mIsDeleted;                        // _F
-    u32 mSettings_1;                        // _10
-    u32 mSettings_2;                        // _14
-    u8 mMovementID;                         // _18
-    u8 mLinkID;                             // _19
+    u32 mSettings_1;                        // _10 (Nybbles 5 to 12)
+    u32 mSettings_2;                        // _14 (Nybbles 13 to 20)
+    u8 mMovementID;                         // _18 (Nybble 21 to 22)
+    u8 mLinkID;                             // _19  (Nybble 23 to 24)
     u8 mInitialStateFlags;                  // _1A
     u8 _1B;                                 // _1B Padding
     sead::OffsetList<BaseActor> mChildList; // _1C

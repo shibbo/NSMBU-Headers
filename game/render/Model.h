@@ -63,7 +63,7 @@ public:
     const char* getBoneName(u32 idx) const override;
     u32 getBoneCount() const override;
     void setBoneSRT(u32 idx, const Mtx34& mtxRT, const Vec3& scale) override;
-    void getBoneSRT(u32 idx, Mtx34* mtxRT = NULL, Vec3* scale = NULL) override;
+    void getBoneSRT(u32 idx, Mtx34* mtxRT, Vec3* scale) override;
     // World matrix for bone
     void setBoneTransform(u32 idx, const Mtx34& transform) override;
     void getBoneTransform(u32 idx, Mtx34& transform) override;
@@ -243,17 +243,17 @@ public:
     static inline ModelWrapper* create(const sead::SafeString& archiveIdentifier, const sead::SafeString& modelIdentifier, u32 numSklAnims = 0, u32 numTexAnims = 0, u32 numShuAnims = 0, u32 numVisAnims = 0, u32 numShaAnims = 0, bool unk2 = false) 
     {
         ResArchive* archive = ResArchiveMgr::instance->get(archiveIdentifier);
-        Model* model = archive->getModel(modelIdentifier, numSklAnims, numTexAnims, numShuAnims, numVisAnims, numShaAnims, unk2, nullptr);
+        Model* model = archive->getModel(modelIdentifier, numSklAnims, numTexAnims, numShuAnims, numVisAnims, numShaAnims, unk2, 0);
         ModelWrapper* wrapper = new ModelWrapper(model, numSklAnims, numTexAnims, numShuAnims, numVisAnims, numShaAnims);
-        wrapper->setup(archive, nullptr, nullptr);
+        wrapper->setup(archive, 0, 0);
         return wrapper;
     }
 
     static inline ModelWrapper* create(ResArchive* archive, const sead::SafeString& modelIdentifier, u32 numSklAnims = 0, u32 numTexAnims = 0, u32 numShuAnims = 0, u32 numVisAnims = 0, u32 numShaAnims = 0, bool unk2 = false) 
     {
-        Model* model = archive->getModel(modelIdentifier, numSklAnims, numTexAnims, numShuAnims, numVisAnims, numShaAnims, unk2, nullptr);
+        Model* model = archive->getModel(modelIdentifier, numSklAnims, numTexAnims, numShuAnims, numVisAnims, numShaAnims, unk2, 0);
         ModelWrapper* wrapper = new ModelWrapper(model, numSklAnims, numTexAnims, numShuAnims, numVisAnims, numShaAnims);
-        wrapper->setup(archive, nullptr, nullptr);
+        wrapper->setup(archive, 0, 0);
         return wrapper;
     }
 

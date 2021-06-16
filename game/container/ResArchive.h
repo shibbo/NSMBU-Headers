@@ -23,4 +23,4 @@ public:
     ResArchive* get(const sead::SafeString& identifier);
 };
 
-bool loadActorResArchive(const sead::SafeString& name, sead::Heap* heap = NULL);
+bool loadActorResArchive(const sead::SafeString& name, sead::Heap* heap);

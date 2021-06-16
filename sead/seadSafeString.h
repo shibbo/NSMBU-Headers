@@ -7,6 +7,7 @@ namespace sead
     {
     public:
         SafeStringBase() : mStringTop(&cNullChar) { }
+        SafeStringBase(const T* pStr) : mStringTop(pStr) { }
 
         virtual ~SafeStringBase();
         virtual void assureTerminationImpl_() const;
