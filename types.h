@@ -18,8 +18,14 @@ typedef double              f64;
 
 struct Vec2i
 {
-    u32 x;
-    u32 y;
+    s32 x;
+    s32 y;
+
+    Vec2i(s32 v = 0) :
+    x(v), y(v) { }
+
+    Vec2i(s32 x, s32 y) :
+        x(x), y(y) { }
 };
 
 struct Vec3u
